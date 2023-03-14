@@ -29,12 +29,35 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
           ),
           const Divider(),
           Container(
+            margin: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(10.0),
             color: Colors.blueGrey,
-            child: const Text(
-              'hello',
-              style: TextStyle(color: Colors.white),
+            width: double.infinity,
+            child: const Center(
+              child: Text(
+                'hello',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
-          )
+          ),
+          ElevatedButton(
+            onPressed: () {
+              debugPrint('elevated button');
+            },
+            child: const Text('Elevated Button'),
+          ),
+          OutlinedButton(
+            onPressed: () {
+              debugPrint('OutlinedButton button');
+            },
+            child: const Text('Outlined Button'),
+          ),
+          TextButton(
+            onPressed: () {
+              debugPrint('TextButton button');
+            },
+            child: const Text('Text Button'),
+          ),
         ],
       ),
     );
