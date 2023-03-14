@@ -23,7 +23,18 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
       ),
       body: Column(
         children: [
-          Image.asset('images/one.jpg')
+          Image.asset('images/one.jpg'),
+          const SizedBox(
+            height: 10,
+          ),
+          const Divider(),
+          Container(
+            color: Colors.blueGrey,
+            child: const Text(
+              'hello',
+              style: TextStyle(color: Colors.white),
+            ),
+          )
         ],
       ),
     );
