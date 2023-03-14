@@ -8,6 +8,7 @@ class LearnFlutterPage extends StatefulWidget {
 }
 
 class _LearnFlutterPageState extends State<LearnFlutterPage> {
+  bool isSwitch = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,16 +63,26 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
             behavior: HitTestBehavior.opaque,
             onTap: () {
               debugPrint('Row clicked');
-
             },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: const [
-                Icon(Icons.fire_extinguisher, color: Colors.red,),
+                Icon(
+                  Icons.fire_extinguisher,
+                  color: Colors.red,
+                ),
                 Text('Fire Extinguiser'),
                 Icon(Icons.fire_extinguisher),
               ],
             ),
+          ),
+          Switch(
+            value: isSwitch,
+            onChanged: (bool newBool) {
+              setState(() {
+                isSwitch = newBool;
+              });
+            },
           ),
         ],
       ),
