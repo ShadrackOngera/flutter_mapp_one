@@ -10,6 +10,17 @@ class LearnFlutterPage extends StatefulWidget {
 class _LearnFlutterPageState extends State<LearnFlutterPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Learn Flutter'),
+        automaticallyImplyLeading: false,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          icon: const Icon(Icons.arrow_back_ios),
+        ),
+      ),
+    );
   }
 }
