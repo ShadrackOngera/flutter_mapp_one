@@ -27,7 +27,7 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
             onPressed: () {
               debugPrint('Clicked');
             },
-            icon: const Icon( Icons.info_outline ),
+            icon: const Icon(Icons.info_outline),
           ),
         ],
       ),
@@ -71,6 +71,22 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
                 debugPrint('TextButton button');
               },
               child: const Text('Text Button'),
+            ),
+            Stack(
+              children: [
+                Container(
+                  height: 40,
+                  decoration: const BoxDecoration(color: Colors.blue),
+                ),
+                const Padding(
+                  padding: EdgeInsets.all(1.0),
+                  child: Text(
+                    'data not used',
+                    style: TextStyle(color: Colors.white),
+                    textAlign: TextAlign.end,
+                  ),
+                )
+              ],
             ),
             GestureDetector(
               behavior: HitTestBehavior.opaque,
