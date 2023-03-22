@@ -22,6 +22,14 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
           },
           icon: const Icon(Icons.arrow_back_ios),
         ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              debugPrint('Clicked');
+            },
+            icon: const Icon( Icons.info_outline ),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -89,12 +97,15 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
                 });
               },
             ),
-            Checkbox(value: isCheckBox, onChanged: (bool? newBool) {
-              setState(() {
-                isCheckBox = newBool;
-              });
-            }),
-            Image.network('https://i.pinimg.com/originals/7c/d7/e9/7cd7e9938329f23bf0e177d735f605c8.jpg')
+            Checkbox(
+                value: isCheckBox,
+                onChanged: (bool? newBool) {
+                  setState(() {
+                    isCheckBox = newBool;
+                  });
+                }),
+            Image.network(
+                'https://i.pinimg.com/originals/7c/d7/e9/7cd7e9938329f23bf0e177d735f605c8.jpg')
           ],
         ),
       ),
